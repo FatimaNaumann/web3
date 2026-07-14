@@ -1,5 +1,5 @@
 body {
-  background-color: #0b0f17;
+  background: linear-gradient(to bottom, #0b0f17, #1c2538);
   color: #ffffff;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -21,10 +21,9 @@ p {
 }
 
 .grid-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
-  flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -33,15 +32,14 @@ p {
   background-color: #121620;
   border: 2px solid #222630;
   border-radius: 10px;
-  width: 260px;
   padding: 30px 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   transition: 0.2s;
 }
 
 .team-card:hover {
-  transform: translateY(-5px);
   border-color: #005aff;
+  animation: wiggle 0.3s ease;
 }
 
 .logo-box {
@@ -60,4 +58,22 @@ p {
 h3 {
   font-size: 22px;
   margin: 0;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 30px;
+    color: #ff3366; 
+  }
 }
