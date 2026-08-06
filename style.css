@@ -1,99 +1,86 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>F1 Pit Stop</title>
-    <style>
-        body {
-            background-color: #2b2b2b;
-            color: white;
-            font-family: Arial;
-            text-align: center;
-        }
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 100vh;
+}
 
-        h1 {
-            font-size: 40px;
-            color: orange;
-        }
+h1 {
+    font-size: 38px;
+    color: orange;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
 
-        p {
-            color: gray;
-            font-size: 18px;
-        }
+p {
+    color: gray;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
 
-        .my-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
 
-        .team-box {
-            background-color: #1a1a1a;
-            border: 3px solid orange;
-            border-radius: 12px;
-            padding: 20px;
-            width: 200px;
-        }
+.my-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .team-box:hover {
-            animation: wiggle 0.5s;
-        }
+.team-box {
+    background-color: #2b2b2b;
+    border-width: 3px;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 10px;
+    padding: 20px 15px;
+    width: 200px;
+    box-shadow: 0px 4px 8px black;
+}
 
-        @keyframes wiggle {
-            0% { transform: rotate(0deg); }
-            50% { transform: rotate(5deg); }
-            100% { transform: rotate(0deg); }
-        }
+.team-box:hover {
+    background-color: #383838;
+    animation: wiggle 0.4s;
+}
 
-        .team-box img {
-            width: 100px;
-            height: auto;
-        }
+.team-box img {
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
 
-        h3 {
-            font-size: 22px;
-            color: white;
-        }
+h3 {
+    font-size: 20px;
+    color: white;
+    margin: 0px;
+}
 
-        @media (max-width: 600px) {
-            .my-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
 
-    <div>
-        <h1>F1 PIT STOP</h1>
-        <p>Select an F1 team to visit their official website!</p>
-    </div>
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
 
-    <div class="my-grid">
 
-        <div class="team-box">
-            <a href="https://www.mercedesamgf1.com/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg/512px-Mercedes_AMG_Petronas_F1_Logo.svg.png" alt="Mercedes">
-            </a>
-            <h3>Mercedes</h3>
-        </div>
-
-        <div class="team-box">
-            <a href="https://www.mclaren.com/racing/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/McLaren_racing_logo.svg/512px-McLaren_racing_logo.svg.png" alt="McLaren">
-            </a>
-            <h3>McLaren</h3>
-        </div>
-
-        <div class="team-box">
-            <a href="https://www.williamsf1.com/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Williams_Racing_logo.svg/512px-Williams_Racing_logo.svg.png" alt="Williams">
-            </a>
-            <h3>Williams</h3>
-        </div>
-
-    </div>
-
-</body>
-</html>
+@media (max-width: 600px) {
+    .my-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+}
