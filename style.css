@@ -1,21 +1,23 @@
+
 body {
-  background: linear-gradient(to bottom, #0b0f17, #1c2538);
+  background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
   color: #ffffff;
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 40px 20px;
+  min-height: 100vh;
 }
 
 h1 {
   font-size: 40px;
-  color: #005aff;
+  color: #ff8700;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
 p {
-  color: #888888;
+  color: #cccccc;
   font-size: 18px;
   margin-bottom: 40px;
 }
@@ -23,47 +25,47 @@ p {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  max-width: 1000px;
+  gap: 25px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
 .team-card {
-  background-color: #121620;
-  border: 2px solid #222630;
-  border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
+  background-color: #1a1a1a;
+  border: 3px solid #ff8700;
+  border-radius: 12px;
+  padding: 25px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 .team-card:hover {
-  border-color: #005aff;
-  animation: wiggle 0.3s ease;
+  animation: wiggle 0.4s ease;
+  background-color: #262626;
 }
 
 .logo-box {
-  height: 100px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .logo-box img {
   max-width: 80%;
-  max-height: 100%;
+  max-height: 80px;
 }
 
 h3 {
   font-size: 22px;
+  color: #ffffff;
   margin: 0;
 }
 
 @keyframes wiggle {
   0% { transform: rotate(0deg); }
-  25% { transform: rotate(-3deg); }
-  75% { transform: rotate(3deg); }
+  25% { transform: rotate(-4deg); }
+  75% { transform: rotate(4deg); }
   100% { transform: rotate(0deg); }
 }
 
@@ -74,6 +76,5 @@ h3 {
   
   h1 {
     font-size: 30px;
-    color: #005aff; 
   }
 }
